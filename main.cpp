@@ -57,10 +57,10 @@ vector <vector <char> > initializeMatrix(int rows, int columns, char value)
         //set the dimensions
         functionalMatrix.resize(rows);
 
-        for(int i=0; i<rows; i++)
+        for(int i=0; i<functionalMatrix.size(); i++)
         {
                 functionalMatrix[i].resize(columns); //coulmns will adapt to each row
-                for(int j=0; j<rows; j++)
+                for(int j=0; j<functionalMatrix[i].size(); j++)
                 {
                         //declearing the values in each place in the grid
                         functionalMatrix[i][j]= value;
@@ -81,9 +81,10 @@ void printMatrix(vector <vector <char> > matrix)
         for(int i=0; i<matrix.size(); i++)
         {
                 for(int j=0; j<matrix[i].size(); j++)
-                {
-                        cout<<matrix[i][j]<<" ";
-                }
-                cout<<endl;
+               {
+                
+             cout<<matrix[i][j]<<" "; 
         }
+        cout<<endl;
+}
 }
